@@ -1,7 +1,6 @@
 export const ADODB = require('node-adodb');
 let filesource = "./src/Access.accdb";
 export const connection = ADODB.open(`Provider=Microsoft.ACE.OLEDB.12.0${filesource};Data Source=;Persist Security Info=False;`);
-
  
 export let DBController = {
     getData: async function(query) {

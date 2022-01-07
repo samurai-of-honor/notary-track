@@ -7,8 +7,10 @@
     <title>Учет для Нотариусов</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="form.css">
+	<script src="calendar.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
@@ -51,10 +53,52 @@
           </div>
         </div>
       </nav>
-
+	  
       <section class="section is-family-raleway white-text" style="padding: 2rem 2rem 0; height: 50%;">
         <div class="container">
           <div class="columns">
+            <div class="column is-half">
+              <div class="container" style="margin: 10% 0 0 5%;">
+                <div class="columns">
+                  <div class="column is-three-quarters">
+                    <article class="media">
+                      <figure class="media-left">
+                        <span class="icon">
+                          <i class="fas fa-user fa-2x"></i>
+                        </span>
+                      </figure>
+                      <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-3 white">Клиентов сегодня:</h1>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="column is-one-quarter">
+                    <h1 class="title is-size-3 white">3</h1>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column is-three-quarters">
+                    <article class="media">
+                      <figure class="media-left">
+                        <span class="icon">
+                          <i class="fas fa-users fa-2x"></i>
+                        </span>
+                      </figure>
+                      <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-3 white">Клиентов за 7 дней:</h1>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="column is-one-quarter">
+                    <h1 class="title is-size-3 white">36</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="column is-half">
               <div class="chart-container">
                 <canvas id="myChart"></canvas>
@@ -174,6 +218,11 @@
       <a class="right-arrow menu-trans-anim" href="./stat.html">
         <i class="fas fa-chevron-right fa-2x"></i>
       </a>
+	  <script defer>
+        import { drawDiagram } from "./diagram.js"
+        drawDiagram();
+      </script>
+      <script src="./diagram.js"></scr>
     </main>
     <div class="cd-loading-bar is-dark"></div>
   </body>

@@ -7,7 +7,9 @@
     <title>Учет для Нотариусов</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <link rel="stylesheet" href="index.css" />
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
@@ -94,12 +96,22 @@
         <h1 class="title white" style="margin-bottom: 2rem;">
           Статистика:
         </h1>
+		<div class="container">
+              <div class="chart-container">
+                <canvas id="myChart"></canvas>
+              </div>
+              <script defer>
+                import { drawDiagram } from "./diagram.js"
+                drawDiagram();
+              </script>
+            </div>
       </div>
     </section>
 
       <a class="left-arrow to-menu-trans-anim" href="./index.html">
         <i class="fas fa-chevron-left fa-2x"></i>
       </a>
+	  <script src="./diagram.js"></scr>
     </main>
     <div class="cd-loading-bar"></div>
   </body>
