@@ -1,6 +1,6 @@
 export const ADODB = require('node-adodb');
 let filesource = "./src/Access.accdb";
-export const connection = ADODB.open(`Provider=Microsoft.ACE.OLEDB.12.0${filesource};Data Source=;Persist Security Info=False;`);
+export const connection = ADODB.open(`Provider=Microsoft.ACE.OLEDB.12.0;Data Source=${filesource};Persist Security Info=False;`);
  
 export let DBController = {
     getData: async function(query) {
@@ -11,7 +11,7 @@ export let DBController = {
        
           //console.log(JSON.stringify(users, null, 2));
         } catch (error) {
-          console.log(error);
+          console.log(JSON.stringify(error, null, 2));
         }
     },
     writeData: async function(query) {
