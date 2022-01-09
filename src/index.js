@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+if (require('electron-squirrel-startup')) { // eslint-disable-line
   app.quit();
 }
 
@@ -16,10 +16,10 @@ const createWindow = () => {
     height: 1080,
     minWidth: 800,
     minHeight: 600,
-    icon: __dirname + "/img/icon_new.ico",
+    icon: `${__dirname}/img/icon_new.ico`,
     webPreferences: {
-      nodeIntegration: true,
-    },
+      nodeIntegration: true
+    }
   });
 
   mainWindow.maximize();
@@ -59,7 +59,6 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
 
 app.on('closeProgram', () => {
   app.quit();
