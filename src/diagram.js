@@ -1,4 +1,4 @@
-export async function drawDiagram() {
+async function drawDiagram() {
   const db = require('./dbcontroller.js');
   let gradient;
 
@@ -10,7 +10,9 @@ export async function drawDiagram() {
 
   const dbdata =
   await db.DBController
-    .getData('select * from (SELECT top 10 RecordDate, sum(Price) as Income, count(id) as ClientsNumber from log group by RecordDate order by RecordDate desc) as ft order by RecordDate');
+    .getData('select * from (SELECT top 10 RecordDate,' +
+    ' sum(Price) as Income, count(id) as ClientsNumber from log group' +
+    ' by RecordDate order by RecordDate desc) as ft order by RecordDate');
 
   for (let i = 0; i < dbdata.length; i++) {
     const date = new Date(dbdata[i].RecordDate);
@@ -133,3 +135,5 @@ export async function drawDiagram() {
     const myChart = new Chart(ctx, config);
   }
 }
+
+module.exports = { drawDiagram };

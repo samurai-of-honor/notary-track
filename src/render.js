@@ -110,25 +110,12 @@ async function loadNewContent(url, bool) {
             catSelector.append(option);
           }
 
-          const catSelectorChange = async () => {
-            subcatSelector.innerHTML = '';
-            serviceSelector.innerHTML = '';
-            dbdata = await db.DBController
-              .getData(`select * from SubCategories where CategoryId = ${catSelector.value}`);
-            for (const el of dbdata) {
-              const option = document.createElement('option');
-              option.innerText = el.Name;
-              option.value = el.Id;
-              subcatSelector.append(option);
-            }
-            subcatSelectorChange();
-          };
-
           const subcatSelectorChange = async () => {
             serviceSelector.innerHTML = '';
             console.log(subcatSelector.value);
             dbdata = await db.DBController
-              .getData(`select * from Services where SubCategoryId = ${subcatSelector.value}`);
+              .getData(`select * from Services where SubCategoryId 
+              = ${subcatSelector.value}`);
             console.log(dbdata);
             for (const el of dbdata) {
               const option = document.createElement('option');
@@ -138,24 +125,44 @@ async function loadNewContent(url, bool) {
             }
           };
 
+          const catSelectorChange = async () => {
+            subcatSelector.innerHTML = '';
+            serviceSelector.innerHTML = '';
+            dbdata = await db.DBController
+              .getData(`select * from SubCategories where CategoryId
+               = ${catSelector.value}`);
+            for (const el of dbdata) {
+              const option = document.createElement('option');
+              option.innerText = el.Name;
+              option.value = el.Id;
+              subcatSelector.append(option);
+            }
+            subcatSelectorChange();
+          };
+
           catSelectorChange();
 
           catSelector.onchange = catSelectorChange;
           subcatSelector.onchange = subcatSelectorChange;
 
-          document.querySelector('.addrecord-button').addEventListener('click', async () => {
-            if (
-              serviceSelector.value != '' &&
-                            incomeInput.value != '' &&
-                            parseInt(incomeInput.value) != NaN &&
-                            realIncomeInput.value != '' &&
-                            parseInt(realIncomeInput.value) != NaN &&
-                            dateInput.value != ''
-            ) {
-              const nextid = await db.DBController.getData('select top 1 Id from log order by Id desc');
-              db.DBController.writeData(`INSERT INTO Log (Id, ServiceId, RecordDate, Price, DropOff) VALUES (${(nextid[0].Id + 1)}, ${serviceSelector.value}, "${dateInput.value}", ${incomeInput.value}, ${dropOffInput.checked})`);
-            }
-          });
+          document.querySelector('.addrecord-button')
+            .addEventListener('click', async () => {
+              if (
+                serviceSelector.value !== '' &&
+                            incomeInput.value !== '' &&
+                            !isNaN(parseInt(incomeInput.value)) &&
+                            realIncomeInput.value !== '' &&
+                            !isNaN(parseInt(realIncomeInput.value)) &&
+                            dateInput.value !== ''
+              ) {
+                const nextid = await db.DBController
+                  .getData('select top 1 Id from log order by Id desc');
+                db.DBController.writeData(`INSERT INTO Log (Id, ServiceId,
+                   RecordDate, Price, DropOff) VALUES (${(nextid[0].Id + 1)}, 
+                   ${serviceSelector.value}, "${dateInput.value}", 
+                   ${incomeInput.value}, ${dropOffInput.checked})`);
+              }
+            });
         } else {
           const file = require(filename);
           console.log(file);
@@ -183,7 +190,8 @@ async function loadMainContent(url, bool) {
 
   // body.append(cdlb);
 
-  document.querySelector('main').innerHTML = section.querySelector('main').innerHTML;
+  document.querySelector('main')
+    .innerHTML = section.querySelector('main').innerHTML;
   // ocument.querySelector('main').append(section.querySelector('main'));
 
   const ab = document.querySelector('.actions-block');
