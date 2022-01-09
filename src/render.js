@@ -1,4 +1,4 @@
-import { drawDiagram } from "./diagram.js"
+let { drawDiagram } = require("./diagram.js");
 
 let modalButton = document.querySelector('.modal-launch');
 if(modalButton) {
@@ -143,7 +143,7 @@ async function loadNewContent(url, bool) {
                             dateInput.value != ''
                         ) {
                             let nextid = await db.DBController.getData('select top 1 Id from log order by Id desc');
-                            db.DBController.writeData(`INSERT INTO Log (Id, ServiceId, RecordDate, Price, ActualPrice, DropOff) VALUES (${(nextid[0]['Id']+1)}, ${serviceSelector.value}, "${dateInput.value}", ${incomeInput.value}, ${realIncomeInput.value}, ${dropOffInput.checked})`);
+                            db.DBController.writeData(`INSERT INTO Log (Id, ServiceId, RecordDate, Price, DropOff) VALUES (${(nextid[0]['Id']+1)}, ${serviceSelector.value}, "${dateInput.value}", ${incomeInput.value}, ${dropOffInput.checked})`);
                         }
                     });
                 } else {
