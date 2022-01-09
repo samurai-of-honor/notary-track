@@ -9,7 +9,7 @@ export async function drawDiagram() {
     let data1 = [];
     let data2 = [];
 
-    let dbdata = await db.DBController.getData('select * from (SELECT top 10 RecordDate, sum(ActualPrice) as Income, count(id) as ClientsNumber from log group by RecordDate order by RecordDate desc) as ft order by RecordDate');
+    let dbdata = await db.DBController.getData('select * from (SELECT top 10 RecordDate, sum(Price) as Income, count(id) as ClientsNumber from log group by RecordDate order by RecordDate desc) as ft order by RecordDate');
     
     for (let i = 0; i < dbdata.length; i++) {
       let date = new Date(dbdata[i]['RecordDate']);
