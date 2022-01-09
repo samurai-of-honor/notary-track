@@ -1,22 +1,21 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Учет для Нотариусов</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="form.css">
-
     <link rel="stylesheet" href="the-datepicker.css">
     <script src="the-datepicker.js"></script>
-
     <script src="calendar.js"></script>
-
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script defer src="render.js"></script>
     <!-- <script defer src="dbcontroller.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
       const {app} = require('electron').remote;
 
@@ -34,25 +33,25 @@
           <a class="navbar-item" href="">
             <img src="./img/logo.png" width="28" height="28">
           </a>
-      
+
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
-      
+
         <!-- <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item navbar-item-trans">
               Home
             </a>
-      
+
             <a class="navbar-item navbar-item-trans">
               Documentation
             </a>
           </div>
-      
+
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons" style="display: flex; align-items: baseline;">
@@ -66,7 +65,7 @@
           </div>
         </div> -->
       </nav>
-  
+
       <section class="section is-family-raleway white-text" style="padding: 2rem 2rem 0; height: 50%;">
         <div class="container">
           <div class="columns">
@@ -120,7 +119,7 @@
           </div>
         </div>
       </section>
-  
+
       <div class="modal is-family-raleway">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -137,7 +136,7 @@
           </footer>
         </div>
       </div>
-      
+
       <section class="section is-family-raleway is-full is-dark white-text actions-block">
         <div class="container">
           <h1 class="title white" style="margin-bottom: 2rem;">

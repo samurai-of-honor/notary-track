@@ -192,7 +192,7 @@ async function loadMainContent(url, bool) {
 
   document.querySelector('main')
     .innerHTML = section.querySelector('main').innerHTML;
-  // ocument.querySelector('main').append(section.querySelector('main'));
+  // document.querySelector('main').append(section.querySelector('main'));
 
   const ab = document.querySelector('.actions-block');
   ab.classList.add('page-is-back-changing');
