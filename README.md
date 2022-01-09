@@ -1,79 +1,56 @@
 <div id="top"></div>
 
-# О проэкте
-
-Данное приложение предназначено для облегчения и оптимизации учета услуг у нотариусов
-
+# NotaryTrack Program
+This is a program for notary affair.
 [![Product Screen Shot][product-screenshot]](src/img/screen1.png)
 
-Существует много разных приложений для учета нотариальных дествий, но ни одно из них не соответствует требованиям. Исходя из этого было принято решение сделать свое приложение, которое будет удовлетворять нашим требованиям.
-
-Преимущества:
-
-* Возможность исследовать полную статистику и управлять ею благодаря различным графикам и встроенным базам данных
-* Открытый код, позволяющий настроить приложение под свои нужды
-* Стильный минималистичный дизайн, который облегчает работу с приложением :smile:
-* Бесплатный доступ к полному функционалу приложения
-
-<p align="right">(<a href="#top">вверх</a>)</p>
-
-
-
-## Использованые библиотеки и фреймфорки
-
-Здесь перечислены библиотеки и фреймворки, используемые при работе этого приложения.
-
+### Programming language, libraries and frameworks: 
+* JavaScript
 * [Electron](https://www.electronjs.org/)
 * [Node adodb](https://github.com/nuintun/node-adodb)
 
-<p align="right">(<a href="#top">вверх</a>)</p>
+### What this program can do:
+* Add a new record;
+* View daily and weekly statistics on the chart;
+* More features coming soon...
 
+### Advantages:
+* Ability to explore and manage complete statistics thanks to various charts and built-in databases;
+* Open source that allows you to customize the application to fit your needs;
+* Stylish minimalist design that makes it easy to use the application: smile:
+* Free access to the full functionality of the application.
 
+### How to use
+1. Clone the repository to local storage.
+```sh
+git clone https://github.com/samurai-of-honor/kursach.git
+```
+2. Installing NPM modules:
+```sh
+npm i
+```
+3. To run the program use:
+```sh
+npm run start
+```
+4. To compile the program and create an installation file, use:
+```sh
+npm run make
+```
 
-<!-- GETTING STARTED -->
-## Начало работы
-
-### Установка
-
-Для установки приложения необходимо выполнить такие шаги:
-
-1. Клонировать репозиторий
-   ```sh
-   git clone https://github.com/samurai-of-honor/kursach.git
-   ```
-2. Установиль модули NPM
-   ```sh
-   npm install
-   ```
-3. Преобразовать код в приложение
-   ```sh
-   npm make
-   ```
-
-
-<!-- USAGE EXAMPLES -->
-### Использование
-
-После установки приложения, ярлык появится у вас на рабочем столе, для использованиия нужно запустить приложение с помощью ярлыка
-
-<p align="right">(<a href="#top">вверх</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Дорожная карта
-
-- [х] Создать главную страницу приложения
-- [x] Добавить страницу с дополнительной информацией
-- [х] Добавить возможность добавления новой записи в базу данных
-- [ ] Добавить возможность изменения и удаления записей в базе данных
-- [ ] Добавить страницу с графиками и статистикой
+### Road map
+- [x] Create the main page of the application
+- [x] Add a page with additional information
+- [x] Add the ability to add a new record to the database
+- [ ] Add the ability to change and delete records in the database
+- [ ] Add a page with graphs and statistics
 - [ ] Chinese
 - [ ] Spanish
 
-Также вы можете написать нам свои запросы к этому приложению на странице [Предложения и неисправности](https://github.com/samurai-of-honor/kursach/issues)
+You can also write us your requests for this application on the page [Suggestions and faults](https://github.com/samurai-of-honor/kursach/issues)
 
-
-Ссылка на проэкт: [https://github.com/samurai-of-honor/kursach](https://github.com/samurai-of-honor/kursach)
-
+### Contributors
+* [Negrub Artem](https://github.com/Artic67)
+* [Baran Pavlo](https://github.com/samurai-of-honor)
+* [Bezus Danil](https://github.com/danilbezus)
 <p align="right">(<a href="#top">вверх</a>)</p>
