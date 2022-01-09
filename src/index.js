@@ -1,7 +1,8 @@
-import { app, BrowserWindow } from 'electron';
+const { app, BrowserWindow } = require('electron');
+const PATH = require('node-adodb');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+if (require('electron-squirrel-startup')) { // eslint-disable-line
   app.quit();
 }
 
@@ -16,15 +17,15 @@ const createWindow = () => {
     height: 1080,
     minWidth: 800,
     minHeight: 600,
-    icon: __dirname + "/img/icon_new.ico",
+    icon: PATH.join(__dirname, '/img/icon_new.ico'),
     webPreferences: {
-      nodeIntegration: true,
-    },
+      nodeIntegration: true
+    }
   });
 
   mainWindow.maximize();
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/index.html`);
+  mainWindow.loadURL(PATH.join('file://', __dirname, '/index.html'));
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
@@ -59,7 +60,6 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
 
 app.on('closeProgram', () => {
   app.quit();
