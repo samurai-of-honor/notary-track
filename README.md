@@ -43,9 +43,10 @@ npm run make
 - [x] Add a page with additional information
 - [x] Add the ability to add a new record to the database
 - [ ] Add the ability to change and delete records in the database
+- [ ] Add an annual report
 - [ ] Add a page with graphs and statistics
-- [ ] Chinese
-- [ ] Spanish
+- [ ] Ukrainian
+- [ ] English
 
 ### Contributors
 * [Negrub Artem](https://github.com/Artic67)
