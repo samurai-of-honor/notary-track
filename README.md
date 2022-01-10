@@ -2,7 +2,7 @@
 
 # NotaryTrack Program
 This is a program for notary affair.
-[![Product Screen Shot][product-screenshot]](src/img/screen1.png)
+![alt text](./src/img/screen1.png)
 
 ### Programming language, libraries and frameworks: 
 * JavaScript
@@ -47,10 +47,10 @@ npm run make
 - [ ] Chinese
 - [ ] Spanish
 
-You can also write us your requests for this application on the page [Suggestions and faults](https://github.com/samurai-of-honor/kursach/issues)
-
 ### Contributors
 * [Negrub Artem](https://github.com/Artic67)
 * [Baran Pavlo](https://github.com/samurai-of-honor)
 * [Bezus Danil](https://github.com/danilbezus)
+
+You can also write us your requests for this application on the page [Suggestions and faults](https://github.com/samurai-of-honor/kursach/issues)
 <p align="right">(<a href="#top">вверх</a>)</p>
